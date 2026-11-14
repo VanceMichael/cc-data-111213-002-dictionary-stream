@@ -12,7 +12,7 @@
     "acceptance": "node src/cli.js demo",
     "demo": "node src/cli.js demo",
     "fixtures": "node scripts/create-fixtures.js",
-    "check": "node --check src/cli.js && node --check src/domain.js"
+    "check": "node --check src/cli.js && node --check src/domain.js && node --check src/framing.js && node --check src/decode.js && node --check src/stream.js && node --check src/demo.js && node --check src/session-stream.js"
   },
   "dependencies": {
     "apache-arrow": "21.1.0"

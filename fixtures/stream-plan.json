@@ -4,10 +4,80 @@
     3,
     8,
     21,
-    64
+    64,
+    199,
+    664,
+    665,
+    1271,
+    1272,
+    1308,
+    1479,
+    1480,
+    2500,
+    2700,
+    2800,
+    2855
   ],
   "consumer": {
-    "pauseAfterBatch": 1
+    "pauseAfterBatch": 1,
+    "maxInflightBatches": 1
   },
-  "replayFrom": 0
+  "replayFrom": 0,
+  "expected": [
+    {
+      "kind": "schema",
+      "start": 0,
+      "end": 440
+    },
+    {
+      "kind": "dictionary",
+      "version": 1,
+      "change": "replacement",
+      "entries": 2,
+      "start": 440,
+      "end": 664
+    },
+    {
+      "kind": "recordBatch",
+      "rows": 4,
+      "version": 1,
+      "start": 664,
+      "end": 1272
+    },
+    {
+      "kind": "dictionary",
+      "version": 2,
+      "change": "delta",
+      "entries": 3,
+      "start": 1272,
+      "end": 1480
+    },
+    {
+      "kind": "recordBatch",
+      "rows": 3,
+      "version": 2,
+      "start": 1480,
+      "end": 2056
+    },
+    {
+      "kind": "dictionary",
+      "version": 3,
+      "change": "replacement",
+      "entries": 2,
+      "start": 2056,
+      "end": 2280
+    },
+    {
+      "kind": "recordBatch",
+      "rows": 3,
+      "version": 3,
+      "start": 2280,
+      "end": 2848
+    },
+    {
+      "kind": "end",
+      "start": 2848,
+      "end": 2856
+    }
+  ]
 }
